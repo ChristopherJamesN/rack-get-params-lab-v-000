@@ -23,8 +23,8 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      item = req.params["q"]
-      resp.write handle_add(item)
+      item_term = req.params["q"]
+      resp.write handle_add(item_term)
     else
       resp.write "The path was not found"
     end
@@ -39,10 +39,10 @@ class Application
     end
   end
 
-  def handle_add(item)
-    if @@items.include?(item)
-      @@cart << item
-      return "added #{item}"
+  def handle_add(item_term)
+    if @@items.include?(item_term)
+      @@cart << item_term
+      return "added #{item_term}"
     else
       return "We don't have that item"
     end
