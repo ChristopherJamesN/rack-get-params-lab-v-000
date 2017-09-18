@@ -55,5 +55,5 @@ class Application
   def self.cart
     @@cart
   end
-  
+
 end
