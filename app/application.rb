@@ -47,4 +47,12 @@ class Application
       return "We don't have that item"
     end
   end
+
+  def self.items
+    @@items
+  end
+
+  def self.cart
+    @@cart
+  end
 end
