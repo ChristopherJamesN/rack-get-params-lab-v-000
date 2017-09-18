@@ -23,7 +23,7 @@ class Application
         end
       end
     elsif req.path.match(/add/)
-      item_term = req.params["q"]
+      item_term = req.params["item"]
       resp.write handle_add(item_term)
     else
       resp.write "The path was not found"
@@ -55,4 +55,5 @@ class Application
   def self.cart
     @@cart
   end
+  
 end
