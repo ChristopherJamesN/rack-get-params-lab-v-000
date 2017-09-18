@@ -19,8 +19,8 @@ class Application
         resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
-      if @@items.includes?
-      resp.write ""
+      item = req.params["q"]
+      resp.write handle_add(item)
     else
       resp.write "Your cart is empty"
     end
